@@ -1,5 +1,4 @@
-# url-shortner
-
+# URL shortner 만들기
 ## endpoint 설정
 ### URL shortening endpoint
 - POST /shorten?originalUrl={originalUrl}
@@ -28,3 +27,9 @@
   - 충돌 해결 시 특정 문자열을 추가하는 방식으로 해결하면 DB 오버헤드가 크기 때문에 블룸 필터 등 이용 가능
   - 또는 base-62 변환을 사용하면 됨(흔하고 제일 편하지만 다음 url 유추 가능하기 때문에 보안 문제 발생 가능)
 - 원래값으로 복원이 가능해야 함
+
+## Challenge
+- rate limiter 추가
+- 분산환경에서도 ID의 유일성 보장하기
+- 웹 서버 & 데이터베이스 규모 확장
+- analytics 
